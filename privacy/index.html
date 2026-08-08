@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#fafaf8" />
+    <title>Codie 개인정보처리방침</title>
+    <style>
+      :root { color-scheme:light; --bg:#fafaf8; --surface:#fff; --text:#1a1a1a; --muted:#6b6b6b; --line:#e8e6e1; --accent:#2f6f62; }
+      * { box-sizing:border-box; }
+      body { margin:0; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Noto Sans KR",sans-serif; line-height:1.75; }
+      main { width:min(760px,calc(100% - 40px)); margin:0 auto; padding:64px 0 96px; }
+      nav a { color:var(--muted); font-size:14px; text-decoration:none; }
+      header { margin:30px 0 40px; padding-bottom:28px; border-bottom:1px solid var(--line); }
+      .eyebrow { margin:0 0 8px; color:#9a5d40; font-size:12px; font-weight:800; letter-spacing:.14em; }
+      h1 { margin:0; font-size:38px; line-height:1.2; letter-spacing:-.045em; }
+      .date { margin:12px 0 0; color:var(--muted); font-size:14px; }
+      h2 { margin:44px 0 12px; font-size:22px; letter-spacing:-.025em; }
+      p,li { font-size:15px; }
+      p { margin:10px 0; }
+      ul { margin:10px 0; padding-left:22px; }
+      li+li { margin-top:7px; }
+      .summary { padding:20px 22px; border:1px solid #d5e3de; border-radius:18px; background:#edf5f2; }
+      .summary strong { display:block; margin-bottom:5px; color:#24584e; }
+      table { width:100%; border-collapse:collapse; margin:16px 0; border:1px solid var(--line); background:var(--surface); }
+      th,td { padding:13px 14px; border-bottom:1px solid var(--line); text-align:left; vertical-align:top; font-size:14px; }
+      th { width:34%; background:#f3f2ee; }
+      a { color:var(--accent); text-underline-offset:3px; }
+      footer { margin-top:56px; padding-top:20px; border-top:1px solid var(--line); color:var(--muted); font-size:12px; }
+      @media(max-width:560px){main{padding-top:40px}h1{font-size:32px}th,td{display:block;width:100%}th{border-bottom:0}}
+    </style>
+  </head>
+  <body>
+    <main>
+      <nav><a href="../">Codie Support</a></nav>
+      <header><p class="eyebrow">PRIVACY</p><h1>개인정보처리방침</h1><p class="date">시행일 2026년 8월 8일</p></header>
+      <div class="summary"><strong>핵심 원칙</strong>Codie는 스타일 추천에 필요한 정보만 처리하며 광고 추적, 개인정보 판매, 제3자 맞춤 광고를 하지 않아.</div>
+
+      <h2>처리하는 정보와 목적</h2>
+      <table>
+        <tr><th>로그인 식별자와 이메일</th><td>계정 생성, 로그인, 계정 보호</td></tr>
+        <tr><th>개인화 프로필</th><td>성별, 나이대, 퍼스널컬러, 체형, 패션 숙련도를 이용한 코디 추천</td></tr>
+        <tr><th>옷·코디 사진과 기록</th><td>디지털 옷장, 이미지 분석, 코디 추천</td></tr>
+        <tr><th>셀피 AI 진단 사진</th><td>사용자가 요청한 퍼스널컬러 진단 1회 처리</td></tr>
+        <tr><th>앱 사용 중 위치</th><td>현재 지역 날씨를 조회해 추천에 반영</td></tr>
+        <tr><th>일정 유형과 시간</th><td>기기에서 분류한 일정 상황과 해당 시간대 날씨에 맞춘 추천</td></tr>
+        <tr><th>오류·요청 식별 코드</th><td>장애 확인과 서비스 안정화</td></tr>
+      </table>
+      <p>캘린더의 원본 일정 제목은 기기 안에서만 분류와 안내 문구 생성에 사용하고 서버로 보내지 않아. 위치 좌표는 날씨 조회 요청에만 사용하며 사용자 프로필로 저장하지 않아.</p>
+
+      <h2>사진과 AI 처리</h2>
+      <ul>
+        <li>옷과 코디 사진은 사용자가 기능을 이용하는 동안 Cloudflare R2에 보관해.</li>
+        <li>셀피 AI 진단과 가상 피팅의 입력 사진은 처리가 끝나면 저장소에서 삭제를 시도해. 생성된 결과 이미지는 기능 제공과 재사용을 위해 계정에 연결될 수 있어.</li>
+        <li>AI 분석·이미지 생성을 요청하면 필요한 사진과 스타일 조건을 Google Gemini API에 전송할 수 있어.</li>
+        <li>얼굴 위치·조명·선명도를 확인하는 셀피 품질 검사는 업로드 전에 기기에서 처리해.</li>
+      </ul>
+
+      <h2>이용하는 서비스 제공자</h2>
+      <ul><li>Google: 로그인, Gemini 이미지·스타일 분석</li><li>Apple: Apple로 로그인</li><li>Railway: API 서버</li><li>Neon: 데이터베이스</li><li>Cloudflare: R2 이미지 저장소</li></ul>
+      <p>각 사업자는 Codie의 요청을 처리하는 범위에서 정보를 다루며 각 사업자의 약관과 개인정보 보호 기준이 함께 적용될 수 있어.</p>
+
+      <h2>보관과 삭제</h2>
+      <p>계정 정보, 옷장, 착장 기록과 생성 이미지는 계정을 유지하는 동안 보관해. 앱의 <strong>내 프로필 → 계정 및 데이터 → 계정 삭제</strong>에서 삭제하면 계정에 연결된 데이터베이스 기록과 R2 사진을 함께 삭제해. 법령상 보관 의무나 보안·분쟁 대응에 필요한 최소 정보가 있으면 해당 기간에 한해 별도로 보관할 수 있어.</p>
+
+      <h2>기기 권한</h2>
+      <ul><li>사진·카메라: 옷 등록, 코디 등록, 셀피 진단, 가상 피팅</li><li>위치(앱 사용 중): 현재 지역 날씨 확인</li><li>캘린더 읽기: 일정 유형과 시간에 맞춘 추천</li></ul>
+      <p>권한은 선택 사항이야. 허용하지 않아도 서울 기본 날씨와 요일 기반 추천 등 나머지 기능을 이용할 수 있고 iPhone 설정에서 언제든 바꿀 수 있어.</p>
+
+      <h2>사용자의 선택</h2>
+      <p>프로필에서 개인화 정보를 수정하고, 등록한 옷을 개별 삭제하거나 계정 전체를 삭제할 수 있어. 개인정보 처리 문의와 삭제 요청은 <a href="https://github.com/giwon1130/codie-support/issues">Codie 지원 페이지</a>에 남겨줘.</p>
+
+      <h2>아동의 개인정보</h2>
+      <p>Codie는 만 14세 미만 아동을 대상으로 설계한 서비스가 아니야. 만 14세 미만 사용자의 정보가 보호자 동의 없이 처리된 사실을 확인하면 지원 페이지로 알려줘.</p>
+
+      <h2>변경 안내</h2>
+      <p>이 방침이 바뀌면 시행일과 변경 내용을 이 페이지에 반영해. 사용자의 권리에 중요한 변경은 앱 또는 배포 페이지에서 별도로 안내할 수 있어.</p>
+      <footer>Codie Privacy Policy · 2026-08-08</footer>
+    </main>
+  </body>
+</html>

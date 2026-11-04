@@ -33,7 +33,7 @@
   <body>
     <main>
       <nav><a href="../">Codie Support</a></nav>
-      <header><p class="eyebrow">PRIVACY</p><h1>개인정보처리방침</h1><p class="date">시행일 2026년 11월 2일</p></header>
+      <header><p class="eyebrow">PRIVACY</p><h1>개인정보처리방침</h1><p class="date">시행일 2026년 11월 4일</p></header>
       <div class="summary"><strong>핵심 원칙</strong>Codie는 스타일 추천에 필요한 정보만 처리하며 광고 추적, 개인정보 판매, 제3자 맞춤 광고를 하지 않아.</div>
 
       <h2>처리하는 정보와 목적</h2>
@@ -43,6 +43,7 @@
         <tr><th>선택형 닉네임·프로필 사진</th><td>본인의 프로필 화면 표시. 실명을 요구하지 않으며 사진은 작은 JPEG로 바꿔 촬영 메타데이터를 제거하고 암호화 보관해. 본인 인증으로만 조회하며 Gemini 분석이나 공개 공유에 자동 사용하지 않아.</td></tr>
         <tr><th>선택형 스타일리스트 프로필</th><td>출근 복장, 활동 환경, 선호 스타일, 제외 아이템을 이용한 맞춤 추천과 프로필 보관. 선택 입력한 직업명은 보관만 하고 추천 추론에 사용하지 않아.</td></tr>
         <tr><th>옷·코디 사진과 기록</th><td>디지털 옷장, 이미지 분석, 코디 추천</td></tr>
+        <tr><th>선택형 비공개 OOTD 기록</th><td>직접 저장한 오늘의 룩 사진·날짜·선택 메모를 계정에 연결해 본인의 기록 목록과 상세 화면에 표시</td></tr>
         <tr><th>셀피 AI 진단 사진</th><td>사용자가 요청한 퍼스널컬러 진단 1회 처리</td></tr>
         <tr><th>앱 사용 중 위치</th><td>현재 지역 날씨를 조회해 추천에 반영</td></tr>
         <tr><th>일정 유형과 시간</th><td>기기에서 분류한 일정 상황과 해당 시간대 날씨에 맞춘 추천</td></tr>
@@ -58,6 +59,9 @@
       <h2>선택형 스타일 가이드 취향 기억</h2>
       <p>이 기능은 ‘다음 가이드에도 취향 반영’이 제공되는 앱 업데이트부터 적용돼. 기본은 꺼짐이며 반응을 보낼 때 별도로 선택해야 해. 과거 반응이나 아이템 교체만으로 자동 학습하지 않아. 선택하면 카테고리·종류/소재/핏을 나타내는 구조화 해시·대표 색·일정 유형·5도 단위 체감온도 구간을 계정과 연결해 보관하고, 내일부터 이전 30일 내 반응으로 내부 추천 후보 순위를 조절해. 사진·일정 제목·원래 위치 좌표·자유 입력 문장은 이 신호에 저장하지 않고 Gemini에도 보내지 않아.</p>
       <p>‘기억한 취향 초기화’는 서버에 저장된 취향 신호를 지우고 기본 의견 기록은 기존 90일 기준으로 유지해. 신호는 30일 기준으로 정기 삭제하며 초기화 세대·시각은 오래된 요청의 복원을 막기 위해 계정에 남아. 계정 삭제 시 모두 제거돼. 사용성 분석 참여와 별도 선택이고, 선택하지 않아도 기본 가이드·교체·AI 한도는 같아. 이미지 요청 시 최종 옷 조건을 사용하는 기존 AI 처리는 아래 설명을 따라.</p>
+      <h2>비공개 OOTD 기록</h2>
+      <p>‘오늘의 룩 남기기’가 제공되는 앱 업데이트부터 적용돼. 사진을 선택하는 것만으로 업로드하지 않고 <strong>저장</strong>을 누를 때 사진·날짜·선택 메모를 전송해. 전송 전 작성 내용은 서버에 저장하지 않고 작성 화면을 나가면 비워. 사진은 비율을 유지한 JPEG 원본 보기용(긴 변 최대 1,280px)과 썸네일(최대 320px)로 바꾸며 촬영 메타데이터를 제거해. 사진은 Cloudflare R2에 암호화하고 날짜·메모는 Neon에 계정과 연결해 보관해. Railway API의 본인 인증을 거쳐야 사진을 조회할 수 있어.</p>
+      <p>이 기록은 본인만 보는 기능이야. 사진·메모를 Gemini, 사용성 분석, 추천 학습, 커뮤니티 공개, 옷장 자동 등록에 사용하지 않아. 개별 기록을 삭제하면 사진·날짜·메모를 지워. 네트워크 재시도가 삭제한 기록을 되살리지 않도록 최소 요청 식별자·요청 해시·생성/삭제 시각은 계정 삭제까지 유지해. 계정 삭제 시 이 정보와 남은 OOTD 사진·기록도 함께 삭제해.</p>
       <h2>사진과 AI 처리</h2>
       <ul>
         <li>옷과 코디 사진은 사용자가 기능을 이용하는 동안 Cloudflare R2에 보관해.</li>
@@ -75,7 +79,7 @@
       <p>계정 정보, 옷장, 착장 기록과 생성 이미지는 계정을 유지하는 동안 보관해. 앱의 <strong>내 프로필 → 계정 및 데이터 → 계정 삭제</strong>에서 삭제하면 계정에 연결된 데이터베이스 기록과 R2 사진을 함께 삭제해. 법령상 보관 의무나 보안·분쟁 대응에 필요한 최소 정보가 있으면 해당 기간에 한해 별도로 보관할 수 있어.</p>
 
       <h2>기기 권한</h2>
-      <ul><li>사진·카메라: 옷 등록, 코디 등록, 셀피 진단, 가상 피팅, 선택형 프로필 사진</li><li>위치(앱 사용 중): 현재 지역 날씨 확인</li><li>캘린더 읽기: 일정 유형과 시간에 맞춘 추천</li></ul>
+      <ul><li>사진·카메라: 옷 등록, 코디 등록, 비공개 OOTD 기록, 셀피 진단, 가상 피팅, 선택형 프로필 사진</li><li>위치(앱 사용 중): 현재 지역 날씨 확인</li><li>캘린더 읽기: 일정 유형과 시간에 맞춘 추천</li></ul>
       <p>권한은 선택 사항이야. 허용하지 않아도 서울 기본 날씨와 요일 기반 추천 등 나머지 기능을 이용할 수 있고 iPhone 설정에서 언제든 바꿀 수 있어.</p>
 
       <h2>사용자의 선택</h2>
@@ -95,7 +99,10 @@
       <h2 lang="en">Optional style-guide preference memory</h2>
       <p lang="en">This applies from the app update that offers “Remember for future guides”. It is off by default and requires a separate choice when sending feedback. Past feedback and item swaps are not automatically used to learn preferences. If selected, we link the category, a structured hash representing item type/material/fit, representative color, occasion type and a 5°C temperature band to your account. Starting tomorrow, responses from the preceding 30 days can adjust the ranking of internal recommendation candidates. Photos, calendar titles, original location coordinates and free text are not stored in these signals or sent to Gemini.</p>
       <p lang="en">“Reset remembered preferences” removes these signals on the server while keeping basic feedback under the existing 90-day cleanup policy. Signals are regularly removed on a 30-day basis. A reset revision and time remain with the account to prevent delayed requests from restoring erased signals. Account deletion removes all of them. This is separate from usage analytics. Without opting in, you retain the same base guide, item swaps and AI allowance. Requested images still use the final clothing conditions under the AI processing described above.</p>
-      <footer>Codie Privacy Policy · 2026-11-02</footer>
+      <h2 lang="en">Private OOTD journal</h2>
+      <p lang="en">This applies from the app update that offers “Save today’s look”. Selecting a photo alone does not upload it. Tapping Save sends the photo, date and optional note for your private journal. Unsaved drafts are not stored on the server and are cleared when you leave the editor. Photos are converted to aspect-preserving JPEGs (up to 1,280px for the full view and 320px for thumbnails), with capture metadata removed. Photos are encrypted in Cloudflare R2; dates and notes are linked to your account in Neon. Photo access requires authentication through the Railway API as the owning account.</p>
+      <p lang="en">These records are for your own viewing only. Photos and notes are not used for Gemini, usage analytics, recommendation learning, public community posts or automatic wardrobe registration. Deleting an entry removes its photos, date and note. Minimal request identifiers, a request hash and creation/deletion times remain until account deletion to prevent a delayed retry from restoring an erased entry. Deleting your account also removes this information and all remaining OOTD records and photos.</p>
+      <footer>Codie Privacy Policy · 2026-11-04</footer>
     </main>
   </body>
 </html>
